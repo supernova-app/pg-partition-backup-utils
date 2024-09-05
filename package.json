@@ -1,5 +1,5 @@
 {
-  "name": "pg-partition-backup-util",
+  "name": "pg-partition-backup-utils",
   "module": "backup.ts",
   "type": "module",
   "devDependencies": {
