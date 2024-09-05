@@ -22,8 +22,8 @@ This script provides an interactive way to backup, detach, and optionally drop P
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/anirudhsama/postgres-partition-backup.git
-cd postgres-partition-backup
+git clone https://github.com/supernova-app/pg-partition-backup-utils.git
+cd pg-partition-backup-utils
 ```
 
 2. Install dependencies:
