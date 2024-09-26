@@ -73,13 +73,6 @@ async function main() {
     for (const partition of selectedPartitions) {
       console.log(`Processing ${partition}`);
 
-      // First detach the partition
-      console.log(`Detaching ${partition}`);
-      await sql`ALTER TABLE ${sql(parentTable)} DETACH PARTITION ${sql(
-        partition
-      )}`;
-      console.log(`${partition} detached successfully.`);
-
       // Backup the partition
       console.log(`Backing up ${partition}`);
 
@@ -105,6 +98,13 @@ async function main() {
       );
 
       console.log(`Backup created: ${backupFile}`);
+
+      // Finally detach the partition
+      console.log(`Detaching ${partition}`);
+      await sql`ALTER TABLE ${sql(parentTable)} DETACH PARTITION ${sql(
+        partition
+      )}`;
+      console.log(`${partition} detached successfully.`);
     }
 
     // Ask for drop commands at the end
