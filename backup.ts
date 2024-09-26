@@ -92,7 +92,7 @@ async function main() {
         `-p ${port}`,
         username && `-U ${username}`,
         dbname,
-        "-O -Fc",
+        "-O -Fc -Z zstd:9",
         `-t ${partition}`,
         `-f ${backupFile}`,
         `--no-password`,
